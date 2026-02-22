@@ -1,6 +1,9 @@
 package com.ecommerce.productcatalogservice.Repository;
 
+import com.ecommerce.productcatalogservice.DTOs.SortParam;
 import com.ecommerce.productcatalogservice.Models.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -17,4 +20,5 @@ public interface ProductRepo extends JpaRepository<Product, Long> {
 
     Product save(Product product);
 
+    Page<Product> findProductByName(String query, Pageable pageable);
 }

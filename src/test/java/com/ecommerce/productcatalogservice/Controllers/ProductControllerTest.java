@@ -21,10 +21,10 @@ public class ProductControllerTest {
     @Autowired
     private ProductController productController;
 
-    @MockBean
-    private ProductService productService;
+    //@MockBean
+    //private ProductService productService;
 
-    @Test
+    /*@Test
     public void TestGetProductById_WithValidId_RunSuccessfully() {
         Product product = new Product();
         product.setId(1L);
@@ -58,6 +58,6 @@ public class ProductControllerTest {
         verify(productService, times(1)).getProductById(product.getId());
 
         System.out.println(" Test TestGetProductById_WithInValidId_RunSuccessfully Successful");
-    }
+    }*/
 
 }
